@@ -1,0 +1,124 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: #333;
+}
+
+.container {
+  background-color: #fafafa;
+  width: 100vw;
+  min-height: 100vh;
+  padding: 50px;
+  transform-origin: top left;
+  transition: transform 0.5s linear;
+}
+.container.on {
+  transform: rotate(-20deg);
+}
+.container.on .circle-wrap .circle {
+  transform: rotate(-70deg);
+}
+.container.on + nav li {
+  transform: translateX(0);
+  transition-delay: 0.3s;
+}
+.container .circle-wrap {
+  position: fixed;
+  top: -100px;
+  left: -100px;
+}
+.container .circle-wrap .circle {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: pink;
+  transition: transform 0.5s linear;
+}
+.container .circle-wrap .circle button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 100px;
+  background-color: transparent;
+  border: none;
+  font-size: 26px;
+  color: #fff;
+  cursor: pointer;
+}
+.container .circle-wrap .circle button#open {
+  left: 60%;
+}
+.container .circle-wrap .circle button#close {
+  top: 60%;
+  transform: rotate(90deg);
+  transform-origin: top left;
+}
+.container .content {
+  max-width: 1000px;
+  margin: 50px auto;
+}
+.container .content h1 {
+  font: bold 30px/1 "arial";
+  color: #333;
+  margin-bottom: 20px;
+}
+.container .content p {
+  font: 15px/1.5 "arial";
+  color: #666;
+  margin-bottom: 50px;
+}
+.container .content h3 {
+  font: 12px/1 "arial";
+  color: #000;
+  margin-bottom: 20px;
+}
+.container .content img {
+  width: 100%;
+}
+
+nav {
+  position: fixed;
+  bottom: 40px;
+  left: 0;
+  z-index: 100;
+}
+nav ul {
+  padding-left: 30px;
+}
+nav ul li {
+  text-transform: uppercase;
+  color: #fff;
+  margin: 40px 0;
+  transform: translateX(-100%);
+  transition: transform 0.4s ease-in;
+}
+nav ul li i {
+  font-size: 20px;
+  margin-right: 10px;
+}
+nav ul li + li {
+  margin-left: 15px;
+  transform: translateX(-150%);
+}
+nav ul li + li + li {
+  margin-left: 30px;
+  transform: translateX(-200%);
+}
+
+/*# sourceMappingURL=style.css.map */
